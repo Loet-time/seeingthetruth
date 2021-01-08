@@ -1,0 +1,13 @@
+// Create a memory buffer from the file that contains the trained data
+ANeuralNetworksMemory* mem1 = NULL;
+int fd = open("training_data", O_RDONLY);
+ANeuralNetworksMemory_createFromFd(file_size, PROT_READ, fd, 0, &mem1);
+
+// Configure and create AHardwareBuffer object
+AHardwareBuffer_Desc desc = ...
+AHardwareBuffer* awhb = nullptr;
+AHardwareBuffer_allocate(&desc, &awhb);
+
+// Create ANeuralNetworksMemory from AHardwareBuffer
+ANeuralNetworksMemory* mem2 = NULL;
+ANeuralNetworksMemory_createFromAHardwareBuffer(ahwb, &mem2);
