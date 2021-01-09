@@ -1,0 +1,42 @@
+% ls -l /dev/rdsk | grep /pci@1f,4000/scsi@3/sd@3
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s0 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:a,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s1 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:b,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s2 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:c,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s3 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:d,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s4 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:e,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s5 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:f,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s6 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:g,raw
+lrwxrwxrwx   1 root     root         45 Jan 30 09:07 c0t3d0s7 -> ../../devices/pci@1f,4000/scsi@3/sd@3,0:h,raw% prtconf -vp | grep slot#3
+
+slot#3:  '/pci@1f,4000/scsi@3/disk@3'
+
+slot#3:  '/pci@1f,4000/ebus@1/i2c@14,600000/bits@40/wo@3
+% prtconf -vp | grep /pci@1f,4000/scsi@3/disk@0
+
+bootpath:  '/pci@1f,4000/scsi@3/disk@0,0:a'
+
+disk:  '/pci@1f,4000/scsi@3/disk@0,0'
+
+disk0:  '/pci@1f,4000/scsi@3/disk@0,0'
+
+    slot#0:  '/pci@1f,4000/scsi@3/disk@0'
+    lrwxrwxrwx   1 root   root   41 Jan 30 09:07 /dev/dsk/c0t0d0s0 -> ../../devices/pci@1f,4000/scsi@3/sd@0,0:a
+
+% prtconf -vp | grep /pci@6,4000/scsi@4,1/disk@3
+
+slot#11:  '/pci@6,4000/scsi@4,1/disk@3
+% ls -l /dev/rdsk | grep /pci@6,4000/scsi@4,1/sd@3
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s0 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:a,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s1 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:b,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s2 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:c,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s3 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:d,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s4 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:e,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s5 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:f,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s6 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:g,raw
+lrwxrwxrwx   1 root     root        45 Jan 30 09:07 c12t3d0s7 -> ../../devices/pci@6,4000/scsi@4,1/sd@3,0:h,raw
+WARNING: /pci@6,4000/scsi@4,1/sd@3,0 (sd228)
+Error for Command: read(10)     Error level: Retryable
+Requested Block: 3991014        Error Block: 3991269
+Vendor: FUJITSU                 Serial Number: 9606005441
+Sense Key: Media Error
+ASC: 0x11 (unrecovered read error), ASCQ: 0x0, FRU: 0x0
