@@ -1,0 +1,10 @@
+ok setenv asr-disable-list /pci/ebus/ecpp /pci@1f,4000/scsi@3
+ok asr-disable cpu1 bank3ok .asrCPU0:	Enabled	CPU1:	Disabled	CPU2:	Enabled	CPU3:	Enabled	SC-Marvin:	Enabled	Psycho@1f:	Enabled	Psycho@4:	Enabled	Psycho@6:	Enabled	Cheerio:	Enabled	SCSI:	Enabled	Mem Bank0:	Enabled	Mem Bank1:	Enabled	Mem Bank2:	Enabled	Mem Bank3:	Disabled	PROM:	Enabled	NVRAM:	Enabled	TTY:	Enabled	Audio:	Enabled	SuperIO:	Enabled	PCI Slots:	Enabled	
+ok setenv asr-disable-list /pci/ebus/ecpp /pci@1f,4000/scsi@3
+
+ok setenv asr-disable-list /pci/ebus/ecpp /pci@1f,4000/scsi@3
+
+ok setenv asr-disable-list /pci/ebus/ecpp /pci@1f,4000/scsi@3
+
+ok setenv diag-trigger soft-reset
+
